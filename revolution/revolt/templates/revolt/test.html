@@ -1,0 +1,503 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'revolt/main.css' %}">
+    <title></title>
+    <style>
+
+    div.butt1 {
+        position: absolute;
+        top: 500px;
+        left: 150px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t1 {
+        position: absolute;
+        top: 510px;
+        left: 150px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt2 {
+        position: absolute;
+        top: 500px;
+        left: 200px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t2 {
+        position: absolute;
+        top: 510px;
+        left: 200px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt3 {
+        position: absolute;
+        top: 500px;
+        left: 250px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t3 {
+        position: absolute;
+        top: 510px;
+        left: 250px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt4 {
+        position: absolute;
+        top: 500px;
+        left: 250px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t4 {
+        position: absolute;
+        top: 510px;
+        left: 250px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt5 {
+        position: absolute;
+        top: 500px;
+        left: 300px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t5 {
+        position: absolute;
+        top: 510px;
+        left: 300px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt6 {
+        position: absolute;
+        top: 500px;
+        left: 350px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t6 {
+        position: absolute;
+        top: 510px;
+        left: 350px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt7 {
+        position: absolute;
+        top: 500px;
+        left: 400px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t7 {
+        position: absolute;
+        top: 510px;
+        left: 400px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt8 {
+        position: absolute;
+        top: 500px;
+        left: 450px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t8 {
+        position: absolute;
+        top: 510px;
+        left: 450px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt9 {
+        position: absolute;
+        top: 500px;
+        left: 500px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t9 {
+        position: absolute;
+        top: 510px;
+        left: 500px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt10 {
+        position: absolute;
+        top: 500px;
+        left: 550px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t10 {
+        position: absolute;
+        top: 510px;
+        left: 550px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt11 {
+        position: absolute;
+        top: 500px;
+        left: 600px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t11 {
+        position: absolute;
+        top: 510px;
+        left: 600px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt12 {
+        position: absolute;
+        top: 500px;
+        left: 650px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t12 {
+        position: absolute;
+        top: 510px;
+        left: 650px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt13 {
+        position: absolute;
+        top: 500px;
+        left: 700px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t13 {
+        position: absolute;
+        top: 510px;
+        left: 700px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt14 {
+        position: absolute;
+        top: 500px;
+        left: 750px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t14 {
+        position: absolute;
+        top: 510px;
+        left: 750px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt15 {
+        position: absolute;
+        top: 500px;
+        left: 800px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t15 {
+        position: absolute;
+        top: 510px;
+        left: 800px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt2 {
+        position: absolute;
+        top: 500px;
+        left: 200px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t2 {
+        position: absolute;
+        top: 510px;
+        left: 200px;
+        width: 50px;
+        height: 20px;
+    }
+
+
+    .bb {
+        border: none;
+        width: 50px;
+        height: 20px;
+    }
+    h2 {
+        color:white;
+        font-size: 20px;
+    }
+
+    h1 {
+        color: #04B4AE;
+        font-family: 'Lobster';
+    }
+
+    .page-header {
+        background-color: #04B4AE;
+        margin-top: 0;
+        padding: 20px 20px 20px 40px;
+     }
+
+    .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+        color: #ffffff;
+        font-size: 36pt;
+        text-decoration: none;
+    }
+
+
+}
+
+    </style>
+
+</head>
+<body>
+
+    <div class="page-header">
+        <h1><a href="/">Industrial revolution</a></h1>
+    </div>
+    <div class="butt1">
+        <button class="bb" onmouseover="i1()" onmouseout="o1()" width="10"></button>
+    </div>
+    <div class="t1">
+        <h2 id="1" color="white">1700</h2>
+    </div>
+
+    <div class="butt2">
+        <button class="bb" onmouseover="i2()" onmouseout="o2()" width="10"></button>
+    </div>
+    <div class="t2">
+        <h2 id="2" color="white">1710</h2>
+    </div>
+
+    <div class="butt3">
+        <button class="bb" onmouseover="i3()" onmouseout="o3()" width="10"></button>
+    </div>
+    <div class="t3">
+        <h2 id="3" color="white">1720</h2>
+    </div>
+
+    <div class="butt4">
+        <button class="bb" onmouseover="i4()" onmouseout="o4()" width="10"></button>
+    </div>
+    <div class="t4">
+        <h2 id="4" color="white">1730</h2>
+    </div>
+
+    <div class="butt5">
+        <button class="bb" onmouseover="i5()" onmouseout="o5()" width="10"></button>
+    </div>
+    <div class="t5">
+        <h2 id="5" color="white">1740</h2>
+    </div>
+
+    <div class="butt6">
+        <button class="bb" onmouseover="i6()" onmouseout="o6()" width="10"></button>
+    </div>
+    <div class="t6">
+        <h2 id="6" color="white">1750</h2>
+    </div>
+
+    <div class="butt7">
+        <button class="bb" onmouseover="i7()" onmouseout="o7()" width="10"></button>
+    </div>
+    <div class="t7">
+        <h2 id="7" color="white">1760</h2>
+    </div>
+
+    <div class="butt8">
+        <button class="bb" onmouseover="i8()" onmouseout="o8()" width="10"></button>
+    </div>
+    <div class="t8">
+        <h2 id="8" color="white">1770</h2>
+    </div>
+
+    <div class="butt9">
+        <button class="bb" onmouseover="i9()" onmouseout="o9()" width="10"></button>
+    </div>
+    <div class="t9">
+        <h2 id="9" color="white">1780</h2>
+    </div>
+
+    <div class="butt10">
+        <button class="bb" onmouseover="i10()" onmouseout="o10()" width="10"></button>
+    </div>
+    <div class="t10">
+        <h2 id="10" color="white">1790</h2>
+    </div>
+
+    <div class="butt11">
+        <button class="bb" onmouseover="i11()" onmouseout="o11()" width="10"></button>
+    </div>
+    <div class="t11">
+        <h2 id="11" color="white">1800</h2>
+    </div>
+
+    <div class="butt12">
+        <button class="bb" onmouseover="i12()" onmouseout="o12()" width="10"></button>
+    </div>
+    <div class="t12">
+        <h2 id="12" color="white">1810</h2>
+    </div>
+
+    <div class="butt13">
+        <button class="bb" onmouseover="i13()" onmouseout="o13()" width="10"></button>
+    </div>
+    <div class="t13">
+        <h2 id="13" color="white">1820</h2>
+    </div>
+
+    <div class="butt14">
+        <button class="bb" onmouseover="i14()" onmouseout="o14()" width="10"></button>
+    </div>
+    <div class="t14">
+        <h2 id="14" color="white">1830</h2>
+    </div>
+
+    <div class="butt15">
+        <button class="bb" onmouseover="i15()" onmouseout="o15()" width="10"></button>
+    </div>
+    <div class="t15">
+        <h2 id="15" color="white">1840</h2>
+    </div>
+    <script>
+        function i1() {
+          document.getElementById("1").style.color = "#04B4AE";
+        }
+        function o1() {
+          document.getElementById("1").style.color = "white";
+        }
+
+        function i2() {
+          document.getElementById("2").style.color = "#04B4AE";
+        }
+        function o2() {
+          document.getElementById("2").style.color = "white";
+        }
+
+        function i3() {
+          document.getElementById("3").style.color = "#04B4AE";
+        }
+        function o3() {
+          document.getElementById("3").style.color = "white";
+        }
+
+        function i4() {
+          document.getElementById("4").style.color = "#04B4AE";
+        }
+        function o4() {
+          document.getElementById("4").style.color = "white";
+        }
+
+        function i5() {
+          document.getElementById("5").style.color = "#04B4AE";
+        }
+        function o5() {
+          document.getElementById("5").style.color = "white";
+        }
+
+        function i6() {
+          document.getElementById("6").style.color = "#04B4AE";
+        }
+        function o6() {
+          document.getElementById("6").style.color = "white";
+        }
+
+        function i7() {
+          document.getElementById("7").style.color = "#04B4AE";
+        }
+        function o7() {
+          document.getElementById("7").style.color = "white";
+        }
+
+        function i8() {
+          document.getElementById("8").style.color = "#04B4AE";
+        }
+        function o8() {
+          document.getElementById("8").style.color = "white";
+        }
+
+        function i9() {
+          document.getElementById("9").style.color = "#04B4AE";
+        }
+        function o9() {
+          document.getElementById("9").style.color = "white";
+        }
+
+        function i10() {
+          document.getElementById("10").style.color = "#04B4AE";
+        }
+        function o10() {
+          document.getElementById("10").style.color = "white";
+        }
+
+        function i11() {
+          document.getElementById("11").style.color = "#04B4AE";
+        }
+        function o11() {
+          document.getElementById("11").style.color = "white";
+        }
+
+        function i12() {
+          document.getElementById("12").style.color = "#04B4AE";
+        }
+        function o12() {
+          document.getElementById("12").style.color = "white";
+        }
+
+        function i13() {
+          document.getElementById("13").style.color = "#04B4AE";
+        }
+        function o13() {
+          document.getElementById("13").style.color = "white";
+        }
+
+        function i14() {
+          document.getElementById("14").style.color = "#04B4AE";
+        }
+        function o14() {
+          document.getElementById("14").style.color = "white";
+        }
+
+        function i15() {
+          document.getElementById("15").style.color = "#04B4AE";
+        }
+        function o15() {
+          document.getElementById("15").style.color = "white";
+        }
+    </script>
+
+</body>
+</html>

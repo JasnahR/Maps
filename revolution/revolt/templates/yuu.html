@@ -1,0 +1,538 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'revolt/main.css' %}">
+    <title></title>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+        <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=dZWB1wJGuN5efI6MAZyfpfhP502kVEy6C_kkw1JmlXWURWzOB6eU0bv4Ie_ACCTET96xZv9GRRVPCT3tWs6miEEUjwd3CBqs4z_BU3WMvXcCgZZhT_y3M0nL7S7y_cV7Noa6S4Y4I2U_0LOJWlvUb-G71Y9ev_RRnWuw_2XLq7MQ5k9puKyJnzWFpTU8xHbbRHcpRiValiJvsvH7Si-vMWd3jVmNfJ4ppCHuaGagJllO0iKaitTPkhi08z79mdL12pAvUyxAwsMeaL2kPXNq5Vg0jM3E2wgYKT2aDVKO7RfqpsAE7022wCEs0CAQzrRQFo_jThJTMlwFgnfXE8czqXDFAoXEp8uGSVS1OjBfY8kMLNp0g-1UewVWyUctXNutvWVavwe5KSDC61KAZArN8WU8fvXMoB2_vRyxh51dQa7TXeMgZN_XbH5ibuBYVzx6_aDgHpN-xghm2ByoArjZw7-zZ3WVPMhiFlVOiMv85_DznCeSrJqqFBPM3Oyk9jlYiWzW3S2xc1V-qkUDACji1vmm07T3wRHej1DxqnkJ3FDXvOt3qfaQsxRNAMRJx0s2bamVCahBd6ASgOQ8iqZUKl9TYNofRt5tKQtAzMs69tmFvYKHPw0JoEfQdma4RS54BKhez8TrvveKcKchDHQj6xvoowkPb1djoBpfh6Q9cXyL9Y9i8OwOoAKN2j3v8QhnJpzKv8Wdq4coAIcbqKUPOfVvcjQHAb-PU23IfU7PnHwLojiizUTz-iaetGJ8t5Rkk8LCBemxctVU4vGZORpdTqMdHOr181otsb0HMvpqRf89VBrOZbWiCuetPJoUHRmn8Kf2hApAXe3Olcou63zA_RPvF3UU8XGrFYze-5q-nyPf1yFwhy0Jm18fzMtxLMCtar8GfygFfeRiehQq68ROsPt5_2BPdNckQLo_LHZl1TypD5fPbSWQI-A_y-kr_wV9K1q2GKcQK0zhL9XyjCv7wm39TZecg8-i1Khr8h3oR9A1ig1s5CnHUgIWnU4SN-85xqpyMCmC3p1knRP3Bkf3FtFQvuzNP7RlYLMsn4RjiYjqBassu9BMbwFWUSeBteP0t3_w0lhENidFWJv8Nzme5hXf2Kc58QYJLQL2_91oclD-NOtjXl5siTE9XtJVAQgTojVXP3OZ8XJM2FetkdBnPvV1HcQP8-KVv5_5sjaW5WnEn7Ys96Ey_4VgVwwn74_wIgGOtPoDR3WGMKM2nBvp1A" charset="UTF-8"></script><script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d43b6ee2d63c4a869353803e9686d66b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+
+    <style>
+
+    div.butt1 {
+        position: absolute;
+        top: 500px;
+        left: 150px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t1 {
+        position: absolute;
+        top: 510px;
+        left: 150px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt2 {
+        position: absolute;
+        top: 500px;
+        left: 200px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t2 {
+        position: absolute;
+        top: 510px;
+        left: 200px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt3 {
+        position: absolute;
+        top: 500px;
+        left: 250px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t3 {
+        position: absolute;
+        top: 510px;
+        left: 250px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt4 {
+        position: absolute;
+        top: 500px;
+        left: 250px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t4 {
+        position: absolute;
+        top: 510px;
+        left: 250px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt5 {
+        position: absolute;
+        top: 500px;
+        left: 300px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t5 {
+        position: absolute;
+        top: 510px;
+        left: 300px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt6 {
+        position: absolute;
+        top: 500px;
+        left: 350px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t6 {
+        position: absolute;
+        top: 510px;
+        left: 350px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt7 {
+        position: absolute;
+        top: 500px;
+        left: 400px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t7 {
+        position: absolute;
+        top: 510px;
+        left: 400px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt8 {
+        position: absolute;
+        top: 500px;
+        left: 450px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t8 {
+        position: absolute;
+        top: 510px;
+        left: 450px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt9 {
+        position: absolute;
+        top: 500px;
+        left: 500px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t9 {
+        position: absolute;
+        top: 510px;
+        left: 500px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt10 {
+        position: absolute;
+        top: 500px;
+        left: 550px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t10 {
+        position: absolute;
+        top: 510px;
+        left: 550px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt11 {
+        position: absolute;
+        top: 500px;
+        left: 600px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t11 {
+        position: absolute;
+        top: 510px;
+        left: 600px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt12 {
+        position: absolute;
+        top: 500px;
+        left: 650px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t12 {
+        position: absolute;
+        top: 510px;
+        left: 650px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt13 {
+        position: absolute;
+        top: 500px;
+        left: 700px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t13 {
+        position: absolute;
+        top: 510px;
+        left: 700px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt14 {
+        position: absolute;
+        top: 500px;
+        left: 750px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t14 {
+        position: absolute;
+        top: 510px;
+        left: 750px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt15 {
+        position: absolute;
+        top: 500px;
+        left: 800px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t15 {
+        position: absolute;
+        top: 510px;
+        left: 800px;
+        width: 50px;
+        height: 20px;
+    }
+
+    div.butt2 {
+        position: absolute;
+        top: 500px;
+        left: 200px;
+        width: 50px;
+        height: 10px;
+    }
+    div.t2 {
+        position: absolute;
+        top: 510px;
+        left: 200px;
+        width: 50px;
+        height: 20px;
+    }
+
+
+    .bb {
+        border: none;
+        width: 50px;
+        height: 20px;
+    }
+    h2 {
+        color:white;
+        font-size: 20px;
+    }
+
+    h1 {
+        color: #04B4AE;
+        font-family: 'Lobster';
+    }
+
+    .page-header {
+        background-color: #04B4AE;
+        margin-top: 0;
+        padding: 20px 20px 20px 40px;
+     }
+
+    .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+        color: #ffffff;
+        font-size: 36pt;
+        text-decoration: none;
+    }
+
+
+}
+
+    </style>
+
+</head>
+<body>
+    <iframe src="data:text/html;charset=utf-8;base64,PCFET0NUWVBFIGh0bWw+CjxoZWFkPiAgICAKICAgIDxtZXRhIGh0dHAtZXF1aXY9ImNvbnRlbnQtdHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PVVURi04IiAvPgogICAgCiAgICAgICAgPHNjcmlwdD4KICAgICAgICAgICAgTF9OT19UT1VDSCA9IGZhbHNlOwogICAgICAgICAgICBMX0RJU0FCTEVfM0QgPSBmYWxzZTsKICAgICAgICA8L3NjcmlwdD4KICAgIAogICAgPHNjcmlwdCBzcmM9Imh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9ucG0vbGVhZmxldEAxLjUuMS9kaXN0L2xlYWZsZXQuanMiPjwvc2NyaXB0PgogICAgPHNjcmlwdCBzcmM9Imh0dHBzOi8vY29kZS5qcXVlcnkuY29tL2pxdWVyeS0xLjEyLjQubWluLmpzIj48L3NjcmlwdD4KICAgIDxzY3JpcHQgc3JjPSJodHRwczovL21heGNkbi5ib290c3RyYXBjZG4uY29tL2Jvb3RzdHJhcC8zLjIuMC9qcy9ib290c3RyYXAubWluLmpzIj48L3NjcmlwdD4KICAgIDxzY3JpcHQgc3JjPSJodHRwczovL2NkbmpzLmNsb3VkZmxhcmUuY29tL2FqYXgvbGlicy9MZWFmbGV0LmF3ZXNvbWUtbWFya2Vycy8yLjAuMi9sZWFmbGV0LmF3ZXNvbWUtbWFya2Vycy5qcyI+PC9zY3JpcHQ+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Imh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9ucG0vbGVhZmxldEAxLjUuMS9kaXN0L2xlYWZsZXQuY3NzIi8+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Imh0dHBzOi8vbWF4Y2RuLmJvb3RzdHJhcGNkbi5jb20vYm9vdHN0cmFwLzMuMi4wL2Nzcy9ib290c3RyYXAubWluLmNzcyIvPgogICAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJodHRwczovL21heGNkbi5ib290c3RyYXBjZG4uY29tL2Jvb3RzdHJhcC8zLjIuMC9jc3MvYm9vdHN0cmFwLXRoZW1lLm1pbi5jc3MiLz4KICAgIDxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iaHR0cHM6Ly9tYXhjZG4uYm9vdHN0cmFwY2RuLmNvbS9mb250LWF3ZXNvbWUvNC42LjMvY3NzL2ZvbnQtYXdlc29tZS5taW4uY3NzIi8+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Imh0dHBzOi8vY2RuanMuY2xvdWRmbGFyZS5jb20vYWpheC9saWJzL0xlYWZsZXQuYXdlc29tZS1tYXJrZXJzLzIuMC4yL2xlYWZsZXQuYXdlc29tZS1tYXJrZXJzLmNzcyIvPgogICAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJodHRwczovL3Jhd2Nkbi5naXRoYWNrLmNvbS9weXRob24tdmlzdWFsaXphdGlvbi9mb2xpdW0vbWFzdGVyL2ZvbGl1bS90ZW1wbGF0ZXMvbGVhZmxldC5hd2Vzb21lLnJvdGF0ZS5jc3MiLz4KICAgIDxzdHlsZT5odG1sLCBib2R5IHt3aWR0aDogMTAwJTtoZWlnaHQ6IDEwMCU7bWFyZ2luOiAwO3BhZGRpbmc6IDA7fTwvc3R5bGU+CiAgICA8c3R5bGU+I21hcCB7cG9zaXRpb246YWJzb2x1dGU7dG9wOjA7Ym90dG9tOjA7cmlnaHQ6MDtsZWZ0OjA7fTwvc3R5bGU+CiAgICAKICAgICAgICAgICAgPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwKICAgICAgICAgICAgICAgIGluaXRpYWwtc2NhbGU9MS4wLCBtYXhpbXVtLXNjYWxlPTEuMCwgdXNlci1zY2FsYWJsZT1ubyIgLz4KICAgICAgICAgICAgPHN0eWxlPgogICAgICAgICAgICAgICAgI21hcF9iZjEzMjZiMWZjNzA0MTViOWIwYjMyOTVkMDJkNTIyMiB7CiAgICAgICAgICAgICAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlOwogICAgICAgICAgICAgICAgICAgIHdpZHRoOiAxMDAuMCU7CiAgICAgICAgICAgICAgICAgICAgaGVpZ2h0OiAxMDAuMCU7CiAgICAgICAgICAgICAgICAgICAgbGVmdDogMC4wJTsKICAgICAgICAgICAgICAgICAgICB0b3A6IDAuMCU7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIDwvc3R5bGU+CiAgICAgICAgCjwvaGVhZD4KPGJvZHk+ICAgIAogICAgCiAgICAgICAgICAgIDxkaXYgY2xhc3M9ImZvbGl1bS1tYXAiIGlkPSJtYXBfYmYxMzI2YjFmYzcwNDE1YjliMGIzMjk1ZDAyZDUyMjIiID48L2Rpdj4KICAgICAgICAKPC9ib2R5Pgo8c2NyaXB0PiAgICAKICAgIAogICAgICAgICAgICB2YXIgbWFwX2JmMTMyNmIxZmM3MDQxNWI5YjBiMzI5NWQwMmQ1MjIyID0gTC5tYXAoCiAgICAgICAgICAgICAgICAibWFwX2JmMTMyNmIxZmM3MDQxNWI5YjBiMzI5NWQwMmQ1MjIyIiwKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICBjZW50ZXI6IFswLCAwXSwKICAgICAgICAgICAgICAgICAgICBjcnM6IEwuQ1JTLkVQU0czODU3LAogICAgICAgICAgICAgICAgICAgIHpvb206IDEsCiAgICAgICAgICAgICAgICAgICAgem9vbUNvbnRyb2w6IHRydWUsCiAgICAgICAgICAgICAgICAgICAgcHJlZmVyQ2FudmFzOiBmYWxzZSwKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKTsKCiAgICAgICAgICAgIAoKICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgdGlsZV9sYXllcl8xNjExMzkxYjgwNTc0MDkzYTI2MDE4ZDU0MDVkNzljNyA9IEwudGlsZUxheWVyKAogICAgICAgICAgICAgICAgImh0dHBzOi8ve3N9LnRpbGUub3BlbnN0cmVldG1hcC5vcmcve3p9L3t4fS97eX0ucG5nIiwKICAgICAgICAgICAgICAgIHsiYXR0cmlidXRpb24iOiAiRGF0YSBieSBcdTAwMjZjb3B5OyBcdTAwM2NhIGhyZWY9XCJodHRwOi8vb3BlbnN0cmVldG1hcC5vcmdcIlx1MDAzZU9wZW5TdHJlZXRNYXBcdTAwM2MvYVx1MDAzZSwgdW5kZXIgXHUwMDNjYSBocmVmPVwiaHR0cDovL3d3dy5vcGVuc3RyZWV0bWFwLm9yZy9jb3B5cmlnaHRcIlx1MDAzZU9EYkxcdTAwM2MvYVx1MDAzZS4iLCAiZGV0ZWN0UmV0aW5hIjogZmFsc2UsICJtYXhOYXRpdmVab29tIjogMTgsICJtYXhab29tIjogMTgsICJtaW5ab29tIjogMCwgIm5vV3JhcCI6IGZhbHNlLCAib3BhY2l0eSI6IDEsICJzdWJkb21haW5zIjogImFiYyIsICJ0bXMiOiBmYWxzZX0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfYmYxMzI2YjFmYzcwNDE1YjliMGIzMjk1ZDAyZDUyMjIpOwogICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBtYXJrZXJfNjVjMDljMTA1OGU5NDhlZDg3MGFhZjQ0YmUxOGUxYTAgPSBMLm1hcmtlcigKICAgICAgICAgICAgICAgIFs1MS40MTE3NTIsIC0xLjUyMDQyMl0sCiAgICAgICAgICAgICAgICB7fQogICAgICAgICAgICApLmFkZFRvKG1hcF9iZjEzMjZiMWZjNzA0MTViOWIwYjMyOTVkMDJkNTIyMik7CiAgICAgICAgCiAgICAKICAgICAgICAgICAgdmFyIGljb25fZTQwYzRmYTJkZDA3NGFkY2FmYmU4YzBlMGJhOWY1MjIgPSBMLkF3ZXNvbWVNYXJrZXJzLmljb24oCiAgICAgICAgICAgICAgICB7ImV4dHJhQ2xhc3NlcyI6ICJmYS1yb3RhdGUtMCIsICJpY29uIjogImxlYWYiLCAiaWNvbkNvbG9yIjogIndoaXRlIiwgIm1hcmtlckNvbG9yIjogImdyZWVuIiwgInByZWZpeCI6ICJmYSJ9CiAgICAgICAgICAgICk7CiAgICAgICAgICAgIG1hcmtlcl82NWMwOWMxMDU4ZTk0OGVkODcwYWFmNDRiZTE4ZTFhMC5zZXRJY29uKGljb25fZTQwYzRmYTJkZDA3NGFkY2FmYmU4YzBlMGJhOWY1MjIpOwogICAgICAgIAogICAgCiAgICAgICAgdmFyIHBvcHVwX2QyMDAxMjAzYWUwYTQzZmU4YmQyZWVlMjhjNjUwY2Q3ID0gTC5wb3B1cCh7Im1heFdpZHRoIjogIjEwMCUifSk7CgogICAgICAgIAogICAgICAgICAgICB2YXIgaHRtbF9hNWExZTM5OTg1M2I0NTVlOGUyZjY4MzMzNDliMDlhYSA9ICQoYDxkaXYgaWQ9Imh0bWxfYTVhMWUzOTk4NTNiNDU1ZThlMmY2ODMzMzQ5YjA5YWEiIHN0eWxlPSJ3aWR0aDogMTAwLjAlOyBoZWlnaHQ6IDEwMC4wJTsiPtCQ0L3Qs9C70LjRjzog0JzQsNGI0LjQvdCwINC00LvRjyDQv9C+0YHQtdCy0LAg0YHQtdC80Y/QvSDQsiDQv9C+0YfQstGDLCDQutC+0YLQvtGA0LDRjyDQv9GA0LjQstC+0LTQuNC70LDRgdGMINCyINC00LXQudGB0YLQstC40LUg0LrQvtC90L3QvtC5INGC0Y/Qs9C+0LkuINCR0YvQu9CwINC40LfQvtCx0YDQtdGC0LXQvdCwINCw0LPRgNC+0YLQtdGF0L3QuNC60L7QvCDQlNC20LXRgtGA0L4g0KLQsNC70LvQvtC8LiwxNzAxPC9kaXY+YClbMF07CiAgICAgICAgICAgIHBvcHVwX2QyMDAxMjAzYWUwYTQzZmU4YmQyZWVlMjhjNjUwY2Q3LnNldENvbnRlbnQoaHRtbF9hNWExZTM5OTg1M2I0NTVlOGUyZjY4MzMzNDliMDlhYSk7CiAgICAgICAgCgogICAgICAgIG1hcmtlcl82NWMwOWMxMDU4ZTk0OGVkODcwYWFmNDRiZTE4ZTFhMC5iaW5kUG9wdXAocG9wdXBfZDIwMDEyMDNhZTBhNDNmZThiZDJlZWUyOGM2NTBjZDcpCiAgICAgICAgOwoKICAgICAgICAKICAgIAogICAgCiAgICAgICAgICAgIG1hcmtlcl82NWMwOWMxMDU4ZTk0OGVkODcwYWFmNDRiZTE4ZTFhMC5iaW5kVG9vbHRpcCgKICAgICAgICAgICAgICAgIGA8ZGl2PgogICAgICAgICAgICAgICAgICAgICDQoNGP0LTQvtCy0LDRjyDRgdC10Y/Qu9C60LAKICAgICAgICAgICAgICAgICA8L2Rpdj5gLAogICAgICAgICAgICAgICAgeyJzdGlja3kiOiB0cnVlfQogICAgICAgICAgICApOwogICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBtYXJrZXJfZTAxMDNkODI0MjljNGI3YThmODQ3YmI0YmZkNDJlOTEgPSBMLm1hcmtlcigKICAgICAgICAgICAgICAgIFs0OC44NDAwMTIsIDIuMzMxMTYyXSwKICAgICAgICAgICAgICAgIHt9CiAgICAgICAgICAgICkuYWRkVG8obWFwX2JmMTMyNmIxZmM3MDQxNWI5YjBiMzI5NWQwMmQ1MjIyKTsKICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgaWNvbl9mZmU2YTkxZTU2NDI0ODgxOGQ2YmQ4MjViYmI0NWJhNSA9IEwuQXdlc29tZU1hcmtlcnMuaWNvbigKICAgICAgICAgICAgICAgIHsiZXh0cmFDbGFzc2VzIjogImZhLXJvdGF0ZS0wIiwgImljb24iOiAiaW5mby1jaXJjbGUiLCAiaWNvbkNvbG9yIjogIndoaXRlIiwgIm1hcmtlckNvbG9yIjogImJsdWUiLCAicHJlZml4IjogImZhIn0KICAgICAgICAgICAgKTsKICAgICAgICAgICAgbWFya2VyX2UwMTAzZDgyNDI5YzRiN2E4Zjg0N2JiNGJmZDQyZTkxLnNldEljb24oaWNvbl9mZmU2YTkxZTU2NDI0ODgxOGQ2YmQ4MjViYmI0NWJhNSk7CiAgICAgICAgCiAgICAKICAgICAgICB2YXIgcG9wdXBfZTA5Y2M0ZTliMDQzNGI4NDk0NWJlOWM3MmZkNmVhZTUgPSBMLnBvcHVwKHsibWF4V2lkdGgiOiAiMTAwJSJ9KTsKCiAgICAgICAgCiAgICAgICAgICAgIHZhciBodG1sXzgxZWQ4ZjQxNWMwOTRlMWNiYjEyMWViYzU2N2I2YzBhID0gJChgPGRpdiBpZD0iaHRtbF84MWVkOGY0MTVjMDk0ZTFjYmIxMjFlYmM1NjdiNmMwYSIgc3R5bGU9IndpZHRoOiAxMDAuMCU7IGhlaWdodDogMTAwLjAlOyI+0KTRgNCw0L3RhtC40Y86INCf0YDQuNCx0L7RgCDQtNC70Y8g0LjQt9C80LXRgNC10L3QuNGPINGC0LXQvNC/0LXRgNCw0YLRg9GA0YssINC+0YHQvdC+0LLQsNC90L3Ri9C5INC90LAg0LfQsNC60L7QvdC1INCo0LDRgNC70Y8uINCY0LfQvtCx0YDQtdGC0LXQvdCwINGE0YDQsNC90YbRg9C30YHQutC40Lwg0YTQuNC30LjQutC+0Lwg0JPQuNC50L7QvNC+0Lwg0JDQvNC+0L3RgtC+0L3QvtC8LiwxNzAzPC9kaXY+YClbMF07CiAgICAgICAgICAgIHBvcHVwX2UwOWNjNGU5YjA0MzRiODQ5NDViZTljNzJmZDZlYWU1LnNldENvbnRlbnQoaHRtbF84MWVkOGY0MTVjMDk0ZTFjYmIxMjFlYmM1NjdiNmMwYSk7CiAgICAgICAgCgogICAgICAgIG1hcmtlcl9lMDEwM2Q4MjQyOWM0YjdhOGY4NDdiYjRiZmQ0MmU5MS5iaW5kUG9wdXAocG9wdXBfZTA5Y2M0ZTliMDQzNGI4NDk0NWJlOWM3MmZkNmVhZTUpCiAgICAgICAgOwoKICAgICAgICAKICAgIAogICAgCiAgICAgICAgICAgIG1hcmtlcl9lMDEwM2Q4MjQyOWM0YjdhOGY4NDdiYjRiZmQ0MmU5MS5iaW5kVG9vbHRpcCgKICAgICAgICAgICAgICAgIGA8ZGl2PgogICAgICAgICAgICAgICAgICAgICDQk9Cw0LfQvtCy0YvQuSDRgtC10YDQvNC+0LzQtdGC0YAKICAgICAgICAgICAgICAgICA8L2Rpdj5gLAogICAgICAgICAgICAgICAgeyJzdGlja3kiOiB0cnVlfQogICAgICAgICAgICApOwogICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBtYXJrZXJfNDdlZjU0NTQzNzNiNDZjNmFiNzU3ODUyYmFkNWU4NGEgPSBMLm1hcmtlcigKICAgICAgICAgICAgICAgIFs0OC44NTkzOTIsIDIuMzQ4OTY4XSwKICAgICAgICAgICAgICAgIHt9CiAgICAgICAgICAgICkuYWRkVG8obWFwX2JmMTMyNmIxZmM3MDQxNWI5YjBiMzI5NWQwMmQ1MjIyKTsKICAgICAgICAKICAgIAogICAgICAgICAgICB2YXIgaWNvbl81MDUwNzllYzE4ZDM0MGRlODFjOWE3NTMyZTJiMmQzZiA9IEwuQXdlc29tZU1hcmtlcnMuaWNvbigKICAgICAgICAgICAgICAgIHsiZXh0cmFDbGFzc2VzIjogImZhLXJvdGF0ZS0wIiwgImljb24iOiAiaW5mby1jaXJjbGUiLCAiaWNvbkNvbG9yIjogIndoaXRlIiwgIm1hcmtlckNvbG9yIjogImJsdWUiLCAicHJlZml4IjogImZhIn0KICAgICAgICAgICAgKTsKICAgICAgICAgICAgbWFya2VyXzQ3ZWY1NDU0MzczYjQ2YzZhYjc1Nzg1MmJhZDVlODRhLnNldEljb24oaWNvbl81MDUwNzllYzE4ZDM0MGRlODFjOWE3NTMyZTJiMmQzZik7CiAgICAgICAgCiAgICAKICAgICAgICB2YXIgcG9wdXBfNzJmMDc3ZGIzM2Y5NGRkMGFhZmNlZjI4OWU5ZDRjMGEgPSBMLnBvcHVwKHsibWF4V2lkdGgiOiAiMTAwJSJ9KTsKCiAgICAgICAgCiAgICAgICAgICAgIHZhciBodG1sXzcwMGFhMjBkNDdjNzRiMGFiNTYyM2YxMGUxYjRjMjM5ID0gJChgPGRpdiBpZD0iaHRtbF83MDBhYTIwZDQ3Yzc0YjBhYjU2MjNmMTBlMWI0YzIzOSIgc3R5bGU9IndpZHRoOiAxMDAuMCU7IGhlaWdodDogMTAwLjAlOyI+0KTRgNCw0L3RhtC40Y86INCe0YHQvdC+0LLQsNC9INC90LAg0L/RgNC40L3RhtC40L/QtSDQuNC30LzQtdC90LXQvdC40Y8g0L7QsdGK0ZHQvNCwINC20LjQtNC60L7RgdGC0LgsINC60L7RgtC+0YDQsNGPINC30LDQu9C40YLQsCDQsiDRgtC10YDQvNC+0LzQtdGC0YAuINCh0L7Qt9C00LDQvSDQoNC10L3QtSDQoNC10L7QvNGO0YDQvtC8LDE3MTA8L2Rpdj5gKVswXTsKICAgICAgICAgICAgcG9wdXBfNzJmMDc3ZGIzM2Y5NGRkMGFhZmNlZjI4OWU5ZDRjMGEuc2V0Q29udGVudChodG1sXzcwMGFhMjBkNDdjNzRiMGFiNTYyM2YxMGUxYjRjMjM5KTsKICAgICAgICAKCiAgICAgICAgbWFya2VyXzQ3ZWY1NDU0MzczYjQ2YzZhYjc1Nzg1MmJhZDVlODRhLmJpbmRQb3B1cChwb3B1cF83MmYwNzdkYjMzZjk0ZGQwYWFmY2VmMjg5ZTlkNGMwYSkKICAgICAgICA7CgogICAgICAgIAogICAgCiAgICAKICAgICAgICAgICAgbWFya2VyXzQ3ZWY1NDU0MzczYjQ2YzZhYjc1Nzg1MmJhZDVlODRhLmJpbmRUb29sdGlwKAogICAgICAgICAgICAgICAgYDxkaXY+CiAgICAgICAgICAgICAgICAgICAgINCh0L/QuNGA0YLQvtCy0L7QuSDRgtC10YDQvNC+0LzQtdGC0YAKICAgICAgICAgICAgICAgICA8L2Rpdj5gLAogICAgICAgICAgICAgICAgeyJzdGlja3kiOiB0cnVlfQogICAgICAgICAgICApOwogICAgICAgIAo8L3NjcmlwdD4=" style="position:absolute;width:60%;height:40%;left:100px;top:100px;border:none !important;" ></iframe>
+
+    <div class="page-header">
+        <h1><a href="/">Industrial revolution</a></h1>
+    </div>
+    <div class="butt1">
+        <button class="bb" onmouseover="map1()" onmouseout="o1()" onclick="map1()" width="10"></button>
+    </div>
+    <div class="t1">
+        <h2 id="1" color="white">1700</h2>
+    </div>
+
+    <div class="butt2">
+        <button class="bb" onmouseover="i2()" onmouseout="o2()" width="10"></button>
+    </div>
+    <div class="t2">
+        <h2 id="2" color="white">1710</h2>
+    </div>
+
+    <div class="butt3">
+        <button class="bb" onmouseover="i3()" onmouseout="o3()" width="10"></button>
+    </div>
+    <div class="t3">
+        <h2 id="3" color="white">1720</h2>
+    </div>
+
+    <div class="butt4">
+        <button class="bb" onmouseover="i4()" onmouseout="o4()" width="10"></button>
+    </div>
+    <div class="t4">
+        <h2 id="4" color="white">1730</h2>
+    </div>
+
+    <div class="butt5">
+        <button class="bb" onmouseover="i5()" onmouseout="o5()" width="10"></button>
+    </div>
+    <div class="t5">
+        <h2 id="5" color="white">1740</h2>
+    </div>
+
+    <div class="butt6">
+        <button class="bb" onmouseover="i6()" onmouseout="o6()" width="10"></button>
+    </div>
+    <div class="t6">
+        <h2 id="6" color="white">1750</h2>
+    </div>
+
+    <div class="butt7">
+        <button class="bb" onmouseover="i7()" onmouseout="o7()" width="10"></button>
+    </div>
+    <div class="t7">
+        <h2 id="7" color="white">1760</h2>
+    </div>
+
+    <div class="butt8">
+        <button class="bb" onmouseover="i8()" onmouseout="o8()" width="10"></button>
+    </div>
+    <div class="t8">
+        <h2 id="8" color="white">1770</h2>
+    </div>
+
+    <div class="butt9">
+        <button class="bb" onmouseover="i9()" onmouseout="o9()" width="10"></button>
+    </div>
+    <div class="t9">
+        <h2 id="9" color="white">1780</h2>
+    </div>
+
+    <div class="butt10">
+        <button class="bb" onmouseover="i10()" onmouseout="o10()" width="10"></button>
+    </div>
+    <div class="t10">
+        <h2 id="10" color="white">1790</h2>
+    </div>
+
+    <div class="butt11">
+        <button class="bb" onmouseover="i11()" onmouseout="o11()" width="10"></button>
+    </div>
+    <div class="t11">
+        <h2 id="11" color="white">1800</h2>
+    </div>
+
+    <div class="butt12">
+        <button class="bb" onmouseover="i12()" onmouseout="o12()" width="10"></button>
+    </div>
+    <div class="t12">
+        <h2 id="12" color="white">1810</h2>
+    </div>
+
+    <div class="butt13">
+        <button class="bb" onmouseover="i13()" onmouseout="o13()" width="10"></button>
+    </div>
+    <div class="t13">
+        <h2 id="13" color="white">1820</h2>
+    </div>
+
+    <div class="butt14">
+        <button class="bb" onmouseover="i14()" onmouseout="o14()" width="10"></button>
+    </div>
+    <div class="t14">
+        <h2 id="14" color="white">1830</h2>
+    </div>
+
+    <div class="butt15">
+        <button class="bb" onmouseover="i15()" onmouseout="o15()" width="10"></button>
+    </div>
+    <div class="t15">
+        <h2 id="15" color="white">1840</h2>
+    </div>
+    <script>
+        function i1() {
+          document.getElementById("1").style.color = "#04B4AE";
+        }
+        function o1() {
+          document.getElementById("1").style.color = "white";
+        }
+
+        function i2() {
+          document.getElementById("2").style.color = "#04B4AE";
+        }
+        function o2() {
+          document.getElementById("2").style.color = "white";
+        }
+
+        function i3() {
+          document.getElementById("3").style.color = "#04B4AE";
+        }
+        function o3() {
+          document.getElementById("3").style.color = "white";
+        }
+
+        function i4() {
+          document.getElementById("4").style.color = "#04B4AE";
+        }
+        function o4() {
+          document.getElementById("4").style.color = "white";
+        }
+
+        function i5() {
+          document.getElementById("5").style.color = "#04B4AE";
+        }
+        function o5() {
+          document.getElementById("5").style.color = "white";
+        }
+
+        function i6() {
+          document.getElementById("6").style.color = "#04B4AE";
+        }
+        function o6() {
+          document.getElementById("6").style.color = "white";
+        }
+
+        function i7() {
+          document.getElementById("7").style.color = "#04B4AE";
+        }
+        function o7() {
+          document.getElementById("7").style.color = "white";
+        }
+
+        function i8() {
+          document.getElementById("8").style.color = "#04B4AE";
+        }
+        function o8() {
+          document.getElementById("8").style.color = "white";
+        }
+
+        function i9() {
+          document.getElementById("9").style.color = "#04B4AE";
+        }
+        function o9() {
+          document.getElementById("9").style.color = "white";
+        }
+
+        function i10() {
+          document.getElementById("10").style.color = "#04B4AE";
+        }
+        function o10() {
+          document.getElementById("10").style.color = "white";
+        }
+
+        function i11() {
+          document.getElementById("11").style.color = "#04B4AE";
+        }
+        function o11() {
+          document.getElementById("11").style.color = "white";
+        }
+
+        function i12() {
+          document.getElementById("12").style.color = "#04B4AE";
+        }
+        function o12() {
+          document.getElementById("12").style.color = "white";
+        }
+
+        function i13() {
+          document.getElementById("13").style.color = "#04B4AE";
+        }
+        function o13() {
+          document.getElementById("13").style.color = "white";
+        }
+
+        function i14() {
+          document.getElementById("14").style.color = "#04B4AE";
+        }
+        function o14() {
+          document.getElementById("14").style.color = "white";
+        }
+
+        function i15() {
+          document.getElementById("15").style.color = "#04B4AE";
+        }
+        function o15() {
+          document.getElementById("15").style.color = "white";
+        }
+
+
+
+        </script>
+</body>
